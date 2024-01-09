@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="main" id="main">
+        <div class="calculadora">
+            <div class="title">
+                <h1>Calculadora</h1>
+            </div>
+            <div class="mode" id="mode">
+                <input type="checkbox" class="checkbox" id="check" onclick="mode()">
+
+                <label class="label" for="check">
+                    <div class="ball"></div>
+                </label>
+            </div>
+
+            <div class="screen">
+                <div class="screenSize">
+                    <p id="results"></p>
+                </div>
+            </div>
+
+            <!--Botões-->
+            <div class="teclado" id="teclado">
+                <!--Primeira Linha-->
+                <button class="btn_teclado" id="btnFunc" onclick="clean()">C</button>
+                <button class="btn_teclado" id="btnFunc" onclick="backspace()"><</button>
+                <button class="btn_teclado" id="btnFunc" onclick="read('%')">%</button>
+                <button class="btn_teclado" id="btnFunc" onclick="read('/')">/</button>
+                <!--Segunda Linha-->
+                <button class="btn_teclado" id="btnNum" onclick="read('7')">7</button>
+                <button class="btn_teclado" id="btnNum" onclick="read('8')">8</button>
+                <button class="btn_teclado" id="btnNum" onclick="read('9')">9</button>
+                <button class="btn_teclado" id="btnFunc" onclick="read('*')">X</button>
+                <!--Terceira Linha-->
+                <button class="btn_teclado" id="btnNum" onclick="read('4')">4</button>
+                <button class="btn_teclado" id="btnNum" onclick="read('5')">5</button>
+                <button class="btn_teclado" id="btnNum" onclick="read('6')">6</button>
+                <button class="btn_teclado" id="btnFunc" onclick="read('-')">-</button>
+                <!--Quarta Linha-->
+                <button class="btn_teclado" id="btnNum" onclick="read('1')">1</button>
+                <button class="btn_teclado" id="btnNum" onclick="read('2')">2</button>
+                <button class="btn_teclado" id="btnNum" onclick="read('3')">3</button>
+                <button class="btn_teclado" id="btnFunc" onclick="read('+')">+</button>
+                <!--Quinta Linha-->
+                <button class="btn_teclado" id="btnNum" onclick="read('0')">0</button>
+                <button class="btn_teclado" id="btnFunc" onclick="read('.')">.</button>
+                <button class="btn_teclado"> </button>
+                <button class="btn_teclado" id="btnFunc" onclick="calcular()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

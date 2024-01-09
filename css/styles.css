@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Tamanho da calculadora*/
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: #2e6b65 solid;
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.calculadora.dark {
+    background-color: black;
+}
+
+body.dark {
+    background-color: black;
+}
+
+/*Título*/
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3a5a8b;
+    width: 100%;
+    height: 80px;
+
+}
+
+
+/*Dark and Light mode*/
+.mode {
+    display: flex;
+    width: 90%;
+    height: 50px;
+    color: white;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #204869;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 20px;
+    width: 40px;
+
+    transform: scale(1.5);
+}
+
+.label .ball {
+    background-color: #c1dbff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 17px;
+    width: 17px;
+
+    transform: translate(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(19px);
+}
+
+/*Tela de Resultado*/
+.screen {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.screenSize {
+    width: 90%;
+    height: 90px;
+    background-color: #ffffff7a;
+    border-radius: 15px;
+    border: #2e6b65 solid;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3%;
+    font-size: 60px;
+}
+
+.screenSize p {
+    color: #360043;
+}
+
+/*Teclado*/
+.teclado {
+    width: 90%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.teclado button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: #2e6b65 solid;
+
+    font-size: 20px;
+}
